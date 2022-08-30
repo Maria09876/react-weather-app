@@ -4,18 +4,18 @@ export default function FormatDate(props) {
 
     let days=["Sunday", "Monday","Tuesday", "Wednesday", "Thursday","Friday","Saturday"]
     let months = [
-  "January",
-  "February",
-  "March",
-  "April",
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
   "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December"
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec"
     ];
 
     let currentDay = days[props.date.getUTCDay()];//the number from the props.date.getDay will be replaced by the day of the week that holds the position of that number
@@ -33,10 +33,10 @@ export default function FormatDate(props) {
 
     return (
         <div className="row">
-            <div className="col-6">
+            <div className="col-7">
                 {currentDay}  {date}, {month}
             </div>
-             <div className="col-6">
+             <div className="col-5">
                 {hours}:{minutes}
             </div>                          
         </div>
