@@ -12,7 +12,7 @@ export default function WeatherInfo(props){
 
                 <div className="row">
                     <div className="col-6">
-                        <img src="http://openweathermap.org/img/wn/{props.data.icon}@2x.png" alt={props.data.description} />
+                        <img src= {props.data.icon} alt={props.data.description} />
                         <span className="temperature">{Math.round(props.data.temperature)}</span> °
                         <span className="unit">C</span>
                     </div>

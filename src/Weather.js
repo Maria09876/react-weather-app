@@ -26,7 +26,7 @@ export default function Weather(props) {
             precipitation: response.data.rain,
             sunrise: response.data.sys.sunrise,
             sunset: response.data.sys.sunset,
-            icon: response.data.weather[0].icon,
+            icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
             timezone: response.data.timezone,
             date: new Date((response.data.dt + response.data.timezone)*1000)
         });
