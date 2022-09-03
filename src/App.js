@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <div className="container m-4 p-5">
-      <h1></h1>
+      <h1>Hello World</h1>
       <Weather defaultCity="Tilburg"/>
       <footer>
         This project was created by <a href='https://www.mariaefthymiou.com/' target='_blank' rel="noopener noreferrer" >Maria Efthymiou</a>  and it is 
