@@ -15,11 +15,23 @@ const [forecast, setForecast]=useState(null);
         setForecast(response.data.daily);
         setLoaded(true);        
     }
-console.log(forecast)
+
 
 if (loaded){
    return (
-       <WeatherForecastDay data={forecast[0]}/>
+    <div className="WeatherForecast">
+        <div className="row">
+            {forecast.map(function(dailyForecast, index){
+                return(
+                  <div className="col" key={index}>
+              <WeatherForecastDay data={dailyForecast}/>  
+            </div>  
+                )                
+            })}
+            
+        </div>
+    </div>
+       
     ) 
 } else{
     let longitude= props.data.coordinates.lon;
