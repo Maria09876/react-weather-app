@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { ThreeDots } from  'react-loader-spinner'
 import "./Weather.css";
 import WeatherInfo from "./WeatherInfo";
+
 import WeatherForecast from "./WeatherForecast.js";
 import axios from "axios";
 
@@ -13,7 +14,7 @@ export default function Weather(props) {
     
     
     function handleResponse(response) {
-        
+        console.log(response.data)
         setWeatherData({
             city: response.data.name,
             coordinates:response.data.coord,
@@ -29,7 +30,7 @@ export default function Weather(props) {
             precipitation: response.data.rain,
             sunrise: response.data.sys.sunrise,
             sunset: response.data.sys.sunset,
-            icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+            icon: response.data.weather[0].icon,
             timezone: response.data.timezone,
             date: new Date((response.data.dt + response.data.timezone)*1000)
         });
@@ -66,6 +67,7 @@ export default function Weather(props) {
                 </form>
                 <WeatherInfo data={weatherData}/>
                 <WeatherForecast data= {weatherData}/>
+                
              </div>
         );
     } else {
