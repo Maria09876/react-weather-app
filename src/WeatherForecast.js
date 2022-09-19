@@ -1,7 +1,8 @@
 import React, {useState} from "react";
 import "./WeatherForecast.css";
 import WeatherForecastDay from "./WeatherForecastDay";
-import { ThreeDots } from  'react-loader-spinner'
+import { ThreeDots } from  'react-loader-spinner';
+
 import axios from "axios";
 
 
