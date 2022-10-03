@@ -14,7 +14,6 @@ export default function Weather(props) {
     
     
     function handleResponse(response) {
-        console.log(response.data)
         setWeatherData({
             city: response.data.name,
             coordinates:response.data.coord,
@@ -22,7 +21,6 @@ export default function Weather(props) {
             temperature: response.data.main.temp,
             maxTemp: response.data.main.temp_max,
             minTemp: response.data.main.temp_min,
-            feelsLike: response.data.main.feels_like,
             description: response.data.weather[0].description,
             visibility: response.data.visibility,
             humidity: response.data.main.humidity,

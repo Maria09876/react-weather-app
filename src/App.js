@@ -6,11 +6,10 @@ function App() {
   return (
     <div className="App">
       <div className="container m-4 p-5">
-      <h1>Hello World!</h1>
       <Weather defaultCity="Tilburg"/>
+
       <footer>
-        This project was created by <a href='https://www.mariaefthymiou.com/' target='_blank' rel="noopener noreferrer" >Maria Efthymiou</a>  and it is 
-        <a href='https://github.com/Maria09876/react-weather-app' target='_blank' rel="noopener noreferrer" > open sourced</a>. 
+        This project was created by{""}<a href='https://www.mariaefthymiou.com/' target='_blank' rel="noopener noreferrer" >Maria Efthymiou</a>,{""}it is{""}<a href='https://github.com/Maria09876/react-weather-app' target='_blank' rel="noopener noreferrer" >open sourced on Github</a>{""}and{""}<a href="https://633ac433c893db53997fb38e--capable-travesseiro-af5cb0.netlify.app/" target='_blank' rel="noopener noreferrer">hosted on Netlify</a> . 
       </footer>
       </div>
     </div>
